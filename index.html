@@ -2,14 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no"
+    />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="icon" href="favicon.png" sizes="256x256"/>
+    <link rel="preload" as="image" href="bg.png">
+    <script src="js/fos.min.js"></script>
     <title>Ife's Coop😁</title>
   </head>
   <body>
-    <a href="pages/Caresha-cooks.html">
-      <img src="./images/cooks.JPG" alt="ife with chef hat emoji"
-    /></a>
-    <a href="pages/dede.html"> <img src="./images/dede.png" alt="dede" /></a>
+    <fos-desktop>
+        <fos-bar>
+            <fos-menu name="Start">
+                <div style="min-width: 100px">Menu</div>
+				<hr>
+				<fos-menu-item href="care"><img src="images/cooks.png">Caresha Cooks</fos-menu-item>
+				<fos-menu-item href="dede"><img src="images/dede.png">dede</fos-menu-item>
+			</fos-menu>
+			<div id="clock"></div>
+            </fos-menu>
+        </fos-bar>
+      <fos-icon href="care" name="Caresha Cooks">
+        <img src="./images/cooks.png" />
+      </fos-icon>
+      <fos-icon href="dede" name="Dede">
+        <img src="./images/dede.png" />
+      </fos-icon>
+      <fos-window name="care" title="Caresha Cooks">,<source src="pages/ccooks.html"></fos-window>
+      <fos-window name="dede" title="Happy Birthday Dede!!!!">
+        <audio controls>
+            <source src="audio/Amandla's Interlude.mp4" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <video width="320" height="240" autoplay>
+            <source src="video/dede.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+      </fos-window>
+    </fos-desktop>
+    <script src="js/main.js"></script>
+    <div id="fgbg"></div>
   </body>
 </html>
